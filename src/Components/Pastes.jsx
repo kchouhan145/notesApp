@@ -40,7 +40,7 @@ const Pastes = () => {
                                     <div className='text-sm text-gray-600 sm:text-xs md:text-xs'>
                                         {paste.content}
                                     </div>
-                                    <div className='flex flex-wrap gap-4 justify-evenly mt-2 sm:gap-2 md:gap-2 w-[500px]'>
+                                    <div className='flex flex-wrap gap-4 justify-evenly mt-2 sm:gap-2 md:gap-2'>
                                         <button className=''>
                                             <Link to={`/?pasteId=${paste?._id}`}>
                                                 <box-icon type='solid' name='edit-alt' size='sm'></box-icon>
