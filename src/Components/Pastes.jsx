@@ -4,7 +4,6 @@ import { removeFromPastes } from '../redux/pasteSlice'
 import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 import 'boxicons'
-import { RWebShare } from "react-web-share";
 
 const Pastes = () => {
     const pastes = useSelector((state) => state.paste.pastes);
@@ -31,8 +30,8 @@ const Pastes = () => {
                     filteredData.map(
                         (paste) => {
                             return (
-                                <div 
-                                    className='flex flex-col w-full max-w-[500px] border rounded-lg bg-white p-4 gap-2 sm:p-3 sm:gap-1 md:p-2 md:gap-1' 
+                                <div
+                                    className='flex flex-col w-full max-w-[500px] border rounded-lg bg-white p-4 gap-2 sm:p-3 sm:gap-1 md:p-2 md:gap-1'
                                     key={paste?._id}
                                 >
                                     <div className='text-lg font-semibold sm:text-base md:text-sm'>
@@ -61,14 +60,10 @@ const Pastes = () => {
                                         }}>
                                             <box-icon name='clipboard' size='sm'></box-icon>
                                         </button>
-                                        <RWebShare data={{
-                                            text: paste.content,
-                                            title: paste.title
-                                        }}>
-                                            <button>
-                                                <box-icon name='send' size='sm'></box-icon>
-                                            </button>
-                                        </RWebShare>
+                                        <button>
+                                            <box-icon name='send' size='sm'></box-icon>
+                                        </button>
+
                                     </div>
                                 </div>
                             )
