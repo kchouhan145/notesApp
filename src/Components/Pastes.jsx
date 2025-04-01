@@ -18,7 +18,7 @@ const Pastes = () => {
     return (
         <div className='flex flex-col justify-center items-center '>
             <input
-                className='p-2 rounded min-w-[500px] mt-5 border'
+                className='p-2 rounded mt-5 border'
                 type='search'
                 placeholder='Enter search title'
                 value={searchTerm}
@@ -31,7 +31,7 @@ const Pastes = () => {
                         (paste) => {
                             return (
                                 <div
-                                    className='flex flex-col w-full max-w-[500px] border rounded-lg bg-white p-4 gap-2 sm:p-3 sm:gap-1 md:p-2 md:gap-1'
+                                    className='flex flex-col w-full max-w-[90%] sm:max-w-[500px] border rounded-lg bg-white p-4 gap-2 sm:p-3 sm:gap-1 md:p-2 md:gap-1'
                                     key={paste?._id}
                                 >
                                     <div className='text-lg font-semibold sm:text-base md:text-sm'>
@@ -40,7 +40,7 @@ const Pastes = () => {
                                     <div className='text-sm text-gray-600 sm:text-xs md:text-xs'>
                                         {paste.content}
                                     </div>
-                                    <div className='flex flex-wrap gap-4 justify-evenly mt-2 sm:gap-2 md:gap-2'>
+                                    <div className='flex flex-wrap gap-2 justify-evenly mt-2 sm:gap-2 md:gap-2 w-full'>
                                         <button className=''>
                                             <Link to={`/?pasteId=${paste?._id}`}>
                                                 <box-icon type='solid' name='edit-alt' size='sm'></box-icon>
@@ -63,7 +63,6 @@ const Pastes = () => {
                                         <button>
                                             <box-icon name='send' size='sm'></box-icon>
                                         </button>
-
                                     </div>
                                 </div>
                             )
